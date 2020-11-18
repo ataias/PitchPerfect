@@ -24,14 +24,32 @@
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C6F-Fu-rJY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap To Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pa-mM-ex9">
+                                <rect key="frame" x="152.5" y="476" width="109" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icU-YD-fiM">
+                                <rect key="frame" x="154" y="505" width="106" height="30"/>
+                                <state key="normal" title="Stop Recording"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="9pa-mM-ex9" firstAttribute="centerX" secondItem="Baw-UI-IYg" secondAttribute="centerX" id="Jo1-mz-1VM"/>
+                            <constraint firstItem="icU-YD-fiM" firstAttribute="top" secondItem="9pa-mM-ex9" secondAttribute="bottom" constant="8" symbolic="YES" id="Pwy-Wj-NE7"/>
                             <constraint firstItem="Baw-UI-IYg" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Xwn-fM-dcq"/>
+                            <constraint firstItem="9pa-mM-ex9" firstAttribute="top" secondItem="Baw-UI-IYg" secondAttribute="bottom" constant="8" symbolic="YES" id="dvi-kx-BWF"/>
                             <constraint firstItem="Baw-UI-IYg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="o2J-an-FFc"/>
+                            <constraint firstItem="icU-YD-fiM" firstAttribute="centerX" secondItem="9pa-mM-ex9" secondAttribute="centerX" id="zZg-ff-jD2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="recordButton" destination="Baw-UI-IYg" id="gCL-0I-oRW"/>
+                        <outlet property="recordingLabel" destination="9pa-mM-ex9" id="XDy-PG-5TZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
