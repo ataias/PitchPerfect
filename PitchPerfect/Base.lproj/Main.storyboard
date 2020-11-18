@@ -49,6 +49,7 @@
                     <connections>
                         <outlet property="recordButton" destination="Baw-UI-IYg" id="gCL-0I-oRW"/>
                         <outlet property="recordingLabel" destination="9pa-mM-ex9" id="XDy-PG-5TZ"/>
+                        <outlet property="stopRecordingButton" destination="icU-YD-fiM" id="aFv-sG-Sed"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
