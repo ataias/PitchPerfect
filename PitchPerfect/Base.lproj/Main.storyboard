@@ -38,7 +38,6 @@
                                 <state key="normal" image="Stop"/>
                                 <connections>
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="69t-H9-Eor"/>
-                                    <segue destination="FY7-Lb-0wb" kind="show" id="1gB-Es-uha"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -58,16 +57,17 @@
                         <outlet property="recordButton" destination="Baw-UI-IYg" id="gCL-0I-oRW"/>
                         <outlet property="recordingLabel" destination="9pa-mM-ex9" id="XDy-PG-5TZ"/>
                         <outlet property="stopRecordingButton" destination="icU-YD-fiM" id="aFv-sG-Sed"/>
+                        <segue destination="FY7-Lb-0wb" kind="show" identifier="stopRecording" id="cpw-FA-K1f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1031.8840579710145" y="93.75"/>
+            <point key="canvasLocation" x="1006" y="94"/>
         </scene>
-        <!--View Controller-->
+        <!--Play Sounds View Controller-->
         <scene sceneID="pcQ-iK-puG">
             <objects>
-                <viewController id="FY7-Lb-0wb" sceneMemberID="viewController">
+                <viewController id="FY7-Lb-0wb" customClass="PlaySoundsViewController" customModule="PitchPerfect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P6B-Fq-UQJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
