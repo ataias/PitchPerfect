@@ -142,7 +142,7 @@
                                 </constraints>
                                 <state key="normal" image="Stop"/>
                                 <connections>
-                                    <action selector="stopButtonPressed:" destination="FY7-Lb-0wb" eventType="touchUpInside" id="iPI-QT-Y3W"/>
+                                    <action selector="stopButtonPressed:" destination="FY7-Lb-0wb" eventType="touchUpInside" id="he1-Y2-PBz"/>
                                 </connections>
                             </button>
                         </subviews>

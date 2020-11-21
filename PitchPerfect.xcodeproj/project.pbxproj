@@ -14,6 +14,7 @@
 		4238E56E2563DC5D00C71CF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4238E56C2563DC5D00C71CF6 /* Main.storyboard */; };
 		4238E5702563DC6000C71CF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4238E56F2563DC6000C71CF6 /* Assets.xcassets */; };
 		4238E5732563DC6000C71CF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4238E5712563DC6000C71CF6 /* LaunchScreen.storyboard */; };
+		42DB4DE725691B190032C9BD /* PlaySoundsViewControler+AVAudioPlayerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DB4DE625691B190032C9BD /* PlaySoundsViewControler+AVAudioPlayerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4238E56F2563DC6000C71CF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4238E5722563DC6000C71CF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4238E5742563DC6000C71CF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42DB4DE625691B190032C9BD /* PlaySoundsViewControler+AVAudioPlayerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewControler+AVAudioPlayerDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				4238E5712563DC6000C71CF6 /* LaunchScreen.storyboard */,
 				4238E5742563DC6000C71CF6 /* Info.plist */,
 				420151F12567BDF40095E421 /* PlaySoundsViewController.swift */,
+				42DB4DE625691B190032C9BD /* PlaySoundsViewControler+AVAudioPlayerDelegate.swift */,
 			);
 			path = PitchPerfect;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 				4238E56B2563DC5D00C71CF6 /* RecordSoundsViewController.swift in Sources */,
 				4238E5672563DC5D00C71CF6 /* AppDelegate.swift in Sources */,
 				420151F22567BDF40095E421 /* PlaySoundsViewController.swift in Sources */,
+				42DB4DE725691B190032C9BD /* PlaySoundsViewControler+AVAudioPlayerDelegate.swift in Sources */,
 				4238E5692563DC5D00C71CF6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
