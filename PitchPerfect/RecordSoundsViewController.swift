@@ -20,13 +20,11 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("viewWillAppear")
-        stopRecordingButton.isEnabled = false
+        updateState(inProgress: false)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -39,9 +37,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     // MARK: - IBActions
     @IBAction func recordAudio(_ sender: Any) {
-        recordingLabel.text = "Recording in Progress"
-        stopRecordingButton.isEnabled = true
-        recordButton.isEnabled = false
+        updateState(inProgress: true)
 
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
         let recordingName = "recordedVoice.wav"
@@ -59,15 +55,27 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     @IBAction func stopRecording(_ sender: Any) {
-        recordingLabel.text = "Tap To Record" // FIXME how to make sure this matches what was set on the storyboard?
-        stopRecordingButton.isEnabled = false
-        recordButton.isEnabled = true
+        updateState(inProgress: false)
 
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
         try! audioSession.setActive(false)
     }
 
+    func updateState(inProgress: Bool) {
+        switch inProgress {
+        case true:
+            recordingLabel.text = "Recording in Progress"
+            stopRecordingButton.isEnabled = true
+            recordButton.isEnabled = false
+        case false:
+            recordingLabel.text = "Tap To Record"
+            stopRecordingButton.isEnabled = false
+            recordButton.isEnabled = true
+        }
+    }
+
+    // MARK: - Audio Recorder Delegate
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag {
             performSegue(withIdentifier: "stopRecording", sender: recorder.url)
