@@ -78,11 +78,11 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lYO-nk-qXh">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="228.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ki-qq-7U5" userLabel="Slow Button">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ki-qq-7U5" userLabel="Snail Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="191" height="228.5"/>
                                                 <state key="normal" image="Slow"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TT1-5U-Lu9" userLabel="Fast Button">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TT1-5U-Lu9" userLabel="Rabbit Button">
                                                 <rect key="frame" x="191" y="0.0" width="191" height="228.5"/>
                                                 <state key="normal" image="Fast"/>
                                             </button>
@@ -91,11 +91,11 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="xrj-7w-dkg">
                                         <rect key="frame" x="0.0" y="228.5" width="382" height="229"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5E-Mf-nAg" userLabel="HighPitch Button">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5E-Mf-nAg" userLabel="Chipmunk Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="191" height="229"/>
                                                 <state key="normal" image="HighPitch"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuc-E7-iZw" userLabel="LowPitch Button">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuc-E7-iZw" userLabel="Vader Button">
                                                 <rect key="frame" x="191" y="0.0" width="191" height="229"/>
                                                 <state key="normal" image="LowPitch"/>
                                             </button>
@@ -137,6 +137,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tbv-XS-zZR"/>
+                    <connections>
+                        <outlet property="chipmunkButton" destination="T5E-Mf-nAg" id="icO-qv-Pko"/>
+                        <outlet property="echoButton" destination="Jbn-L5-kR0" id="qeO-mr-la3"/>
+                        <outlet property="rabbitButton" destination="TT1-5U-Lu9" id="wLM-et-ad5"/>
+                        <outlet property="reverbButton" destination="PCV-qJ-A3l" id="lwg-SO-c9Q"/>
+                        <outlet property="snailButton" destination="9Ki-qq-7U5" id="mj6-wt-4VQ"/>
+                        <outlet property="stopButton" destination="ieF-2m-OP0" id="sog-8P-IVd"/>
+                        <outlet property="vaderButton" destination="Tuc-E7-iZw" id="D3B-Fb-ET8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQL-yD-15u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
