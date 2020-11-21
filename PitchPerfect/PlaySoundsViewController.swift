@@ -45,6 +45,7 @@ class PlaySoundsViewController: UIViewController {
         stopAudio()
     }
 
+    // MARK: - Audio
     var recordedAudioURL: URL!
     var audioFile: AVAudioFile!
     var audioEngine: AVAudioEngine!
@@ -55,6 +56,7 @@ class PlaySoundsViewController: UIViewController {
         case slow = 0, fast, chipmunk, vader, echo, reverb
     }
 
+    // MARK: - Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAudio()
