@@ -8,7 +8,7 @@
 import UIKit
 import AVFoundation
 
-class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
+class RecordSoundsViewController: UIViewController {
 
     // MARK: - Properties
     var audioRecorder: AVAudioRecorder!
@@ -62,26 +62,13 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         try! audioSession.setActive(false)
     }
 
+    /**
+       Updates state of UI elements. Any updates to recording elements should happen here to avoid inconsistencies.
+     */
     func updateState(inProgress: Bool) {
-        switch inProgress {
-        case true:
-            recordingLabel.text = "Recording in Progress"
-            stopRecordingButton.isEnabled = true
-            recordButton.isEnabled = false
-        case false:
-            recordingLabel.text = "Tap To Record"
-            stopRecordingButton.isEnabled = false
-            recordButton.isEnabled = true
-        }
-    }
-
-    // MARK: - Audio Recorder Delegate
-    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        if flag {
-            performSegue(withIdentifier: "stopRecording", sender: recorder.url)
-        } else {
-            print("recording was not successful")
-        }
+        recordingLabel.text = inProgress ? "Recording in Progress" : "Tap To Record"
+        stopRecordingButton.isEnabled = inProgress
+        recordButton.isEnabled = !inProgress
     }
 }
 
